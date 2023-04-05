@@ -18,13 +18,28 @@
    *  inside the URL Bar. This might need
    *  customisation depending on yout setup!
    */
-    --uc-page-action-margin: 7px;
+    --uc-page-action-margin: 5px;
 }
 
 /* remove window control buttons */
 .titlebar-buttonbox-container {
     display: none !important;
 }
+
+#urlbar {
+    --urlbar-height: 34px !important;
+    --urlbar-toolbar-height: 46px !important;
+}
+
+/* vertical center text in the urlbar */
+#urlbar-input {
+    padding-bottom: 2px !important;
+  }
+  
+  /* dont resize when searching */
+  #urlbar[breakout][breakout-extend] > #urlbar-input-container {
+    padding-block: 0 !important;
+  }
 
 #pageActionButton {
     display: none !important;
@@ -92,12 +107,6 @@
 }
 /* Hides encryption AND permission items */
 /* #identity-box { display: none !important } */
-#tracking-protection-icon-container {
-    margin-top: 2px !important;
-}
-#identity-box {
-    margin-top: 1px !important;
-}
 
 /* Hide everything BUT the zoom indicator within the URL Bar */
 #page-action-buttons > :not(#urlbar-zoom-button):not(#star-button-box) {

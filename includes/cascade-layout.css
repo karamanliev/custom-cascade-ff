@@ -6,10 +6,6 @@
 
 }
 
-
-
-
-
 #main-window,
 #toolbar-menubar,
 #TabsToolbar,
@@ -34,7 +30,11 @@
 #urlbar-input-container[pageproxystate="valid"]
   > #tracking-protection-icon-container
   > #tracking-protection-icon-box
-  > #tracking-protection-icon {
+  > #tracking-protection-icon,
+#urlbar-input-container[pageproxystate="valid"]
+  > #identity-box
+  > #identity-icon-box
+  > #identity-icon {
     padding-bottom: 1px;
 }
 
