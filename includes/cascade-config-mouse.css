@@ -31,19 +31,15 @@
     --urlbar-toolbar-height: 46px !important;
 }
 
-.urlbarView-row[selected] {
-    background-color: transparent !important;
-}
-
 /* vertical center text in the urlbar */
 #urlbar-input {
     padding-bottom: 2px !important;
-  }
-  
-  /* dont resize when searching */
-  #urlbar[breakout][breakout-extend] > #urlbar-input-container {
+}
+
+/* dont resize when searching */
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
     padding-block: 0 !important;
-  }
+}
 
 #pageActionButton {
     display: none !important;
