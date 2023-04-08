@@ -7,23 +7,21 @@
 
   /* These colours are (mainly) used by the
      Container Tabs Plugin */
-  --uc-identity-colour-blue:      #8AADF4;
-  --uc-identity-colour-turquoise: #8BD5CA;
-  --uc-identity-colour-green:     #A6DA95;
-  --uc-identity-colour-yellow:    #EED49F;
-  --uc-identity-colour-orange:    #F5A97F;
-  --uc-identity-colour-red:       #ED8796;
-  --uc-identity-colour-pink:      #F5BDE6;
-  --uc-identity-colour-purple:    #C6A0F6;
+  --uc-identity-colour-blue:      #89B4FA;
+  --uc-identity-colour-turquoise: #94E2D5;
+  --uc-identity-colour-green:     #A6E3A1;
+  --uc-identity-colour-yellow:    #F9E2AF;
+  --uc-identity-colour-orange:    #FAB387;
+  --uc-identity-colour-red:       #F38BA8;
+  --uc-identity-colour-pink:      #F5C2E7;
+  --uc-identity-colour-purple:    #CBA6F7;
 
   /*  Cascades main Colour Scheme */
-  --uc-base-colour:               #24273A;
-  --uc-highlight-colour:          #1E2030;
-  --uc-inverted-colour:           #CAD3F5;
-  --uc-inverted-colour-faded:     rgba(202, 211, 245, 0.65);
-  --uc-muted-colour:              #6E738D;
+  --uc-base-colour:               #1E1E2E;
+  --uc-highlight-colour:          #181825;
+  --uc-inverted-colour:           #CDD6F4;
+  --uc-muted-colour:              #6C7086;
   --uc-accent-colour:             var(--uc-identity-colour-purple);
-  --uc-accent-colour-faded:        rgba(198, 160, 246, 0.3);
 
 }}
 
@@ -107,103 +105,3 @@
 .identity-color-red       { --identity-tab-color: var(--uc-identity-colour-red)       !important; --identity-icon-color: var(--uc-identity-colour-red)       !important; }
 .identity-color-pink      { --identity-tab-color: var(--uc-identity-colour-pink)      !important; --identity-icon-color: var(--uc-identity-colour-pink)      !important; }
 .identity-color-purple    { --identity-tab-color: var(--uc-identity-colour-purple)    !important; --identity-icon-color: var(--uc-identity-colour-purple)    !important; }
-
-
-/* ----------------------------------------------------------------- */
-/* ----------------------------------------------------------------- */
-/* -----              Right click context menu                 ----- */
-/* ----------------------------------------------------------------- */
-menupopup :-moz-any(menu, menuitem) {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-}
-
-menupopup
-  > :-moz-any(
-      menu[_moz-menuactive='true'],
-      menuitem[_moz-menuactive='true']
-  ) {
-  background-color: var(--uc-highlight-colour) !important;
-}
-
-#context-navigation
-  > .menuitem-iconic[_moz-menuactive='true']
-  > .menu-iconic-left
-  > .menu-iconic-icon {
-  border-radius: var(--uc-border-radius) !important;
-  background-color: var(--uc-base-colour) !important;
-}
-
-#navigator-toolbox-background {
-  --lwt-accent-color-inactive: var(--uc-base-colour) !important;
-}
-
-menupopup :-moz-any(menu:first-child, menuitem:first-child) {
-  margin-top: 0px !important;
-}
-
-menupopup :-moz-any(menu:last-child, menuitem:last-child) {
-  margin-bottom: 0px !important;
-}
-
-/* ----- Menu Separator #context-sep-selectall ----- */
-menuseparator {
-  border-color: var(--uc-accent-colour-faded) !important;
-}
-
-menuseparator#context-sep-navigation {
-  border-color: var(--uc-accent-colour-faded) !important;
-}
-
-/* ----- Menu Colors -- border - rgba(82, 82, 94, 0.31) ----- */
-:not(#ContentSelectDropdown) > menupopup {
-  --panel-border-color: var(--uc-accent-colour) !important;
-  --panel-background: var(--uc-base-colour) !important;
-  --panel-padding: 5px 0 5px !important;
-  --panel-border-radius: 8px !important;
-}
-
-#context-navigation:not([hidden]) {
-  background-color: var(--uc-highlight-colour) !important;
-  padding: 1px 4px 1px !important;
-  border-top-left-radius: 8px !important;
-  border-top-right-radius: 8px !important;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-}
-
-menupopup#contentAreaContextMenu {
-  --panel-padding: unset !important;
-  --panel-padding: 0 0 5px !important;
-}
-
-.menupopup-arrowscrollbox {
-  overflow: hidden !important;
-}
-
-menupopup
-  menuitem:is(#context-openlinkintab, #context-undo, #context-viewimage) {
-  margin-top: 5px !important;
-}
-
-/* change menu items background color on hover */
-#appMenu-protonMainView toolbarbutton:hover,
-#unified-extensions-area toolbarbutton:hover,
-#widget-overflow-mainView toolbarbutton:hover,
-#allTabsMenu-allTabsView toolbarbutton:hover {
-    background-color: var(--uc-highlight-colour) !important;
-}
-
-/* ======================== Tabs ======================================= */
-/* ----- Non active tabs have darker text ----- */
-.tabbrowser-tab:not([visuallyselected='true']):not([multiselected]):not(:hover)
-    .tab-label-container
-    .tab-label {
-    color: var(--uc-inverted-colour-faded) !important;
-}
-
-.tabbrowser-tab .tab-label-container .tab-label {
-    transition: color 250ms ease !important;
-}

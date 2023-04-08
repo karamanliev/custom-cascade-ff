@@ -277,6 +277,7 @@ user_pref("browser.newtabpage.activity-stream.feeds.topsites", true);
 user_pref("permissions.default.desktop-notification", 0);
 user_pref("identity.fxaccounts.enabled", true);
 user_pref("browser.download.always_ask_before_handling_new_types", false);
+user_pref("devtools.accessibility.enabled", false);
 
 /****************************************************************************
  * END: BETTERFOX                                                           *
