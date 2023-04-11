@@ -44,3 +44,7 @@
     background: var(--toolbar-field-focus-background-color) !important;
     border-radius: var(--uc-border-radius) !important;
 }
+
+.urlbar-icon, #urlbar-go-button { margin: auto; }
+
+.urlbar-page-action { padding: 0 inherit !important; }
